@@ -1,0 +1,49 @@
+{
+  "vType": "array",
+  "elem": {
+    "vType": "object",
+    "type": {
+      "vType": "text",
+      "required": 1
+    },
+    "title": {
+      "vType": "text",
+      "required": 0
+    },
+    "post_id": {
+      "vType": "id",
+      "required": 1
+    },
+    "message": {
+      "vType": "text",
+      "required": 0
+    },
+    "sent_at": {
+      "vType": "int",
+      "required": 1
+    },
+    "sender": {
+      "vType": "object",
+      "name": {
+        "vType": "text",
+        "required": 1
+      },
+      "img": {
+        "vType": "url",
+        "required": 0
+      }
+    },
+    "img": {
+      "vType": "url",
+      "required": 0,
+    },
+    "icon": {
+      "vType": "text",
+      "required": 0,
+    },
+    "praised": {
+      "vType": "array",
+      "required": 0
+    }
+  }
+}
