@@ -10,6 +10,10 @@
 	  "vType": "text",
 	  "required": 0
 	},
+        "title_html": {
+          "vType": "text",
+          "required": 0
+        },
 	"post_id": {
 	  "vType": "id",
 	  "required": 1
@@ -18,6 +22,10 @@
 	  "vType": "text",
 	  "required": 0
 	},
+        "message_html": {
+          "vType": "text",
+          "required": 0
+        },
 	"sent_at": {
 	  "vType": "int",
 	  "required": 1
