@@ -1,60 +1,67 @@
 {
-  "vType": "array",
-  "elem": {
-	"vType": "object",
-	"type": {
-	  "vType": "text",
-	  "required": 1
-	},
-	"title": {
-	  "vType": "text",
-	  "required": 0
-	},
-        "title_html": {
-          "vType": "text",
-          "required": 0
-        },
-	"post_id": {
-	  "vType": "id",
-	  "required": 1
-	},
-	"message": {
-	  "vType": "text",
-	  "required": 0
-	},
-        "message_html": {
-          "vType": "text",
-          "required": 0
-        },
-	"sent_at": {
-	  "vType": "int",
-	  "required": 1
-	},
-	"sender": {
-	  "vType": "object",
-	  "name": {
-		"vType": "text",
-		"required": 1
+  "$id": "https:\/\/raw.githubusercontent.com\/Valota\/data-syntax-yammer\/v2.0.0\/yammer.json",
+  "$schema": "http:\/\/json-schema.org\/draft-07\/schema#",
+  "description": "Yammer data syntax for Valotalive",
+  "type": "array",
+  "items": {
+	"type": "object",
+	"properties": {
+	  "type": {
+		"type": "string"
+	  },
+	  "title": {
+		"type": "string"
+	  },
+	  "title_html": {
+		"type": "string"
+	  },
+	  "post_id": {
+		"type": [
+		  "string",
+		  "integer"
+		]
+	  },
+	  "message": {
+		"type": "string"
+	  },
+	  "message_html": {
+		"type": "string"
+	  },
+	  "sent_at": {
+		"type": "integer"
+	  },
+	  "sender": {
+		"type": "object",
+		"properties": {
+		  "name": {
+			"type": "string"
+		  },
+		  "img": {
+			"type": "string",
+			"format": "uri"
+		  }
+		}
 	  },
 	  "img": {
-		"vType": "url",
-		"required": 0
+		"type": "string",
+		"format": "uri"
+	  },
+	  "icon": {
+		"type": "string"
+	  },
+	  "praised": {
+		"type": "array",
+		"items": {
+		  "type": "object",
+		  "properties": {}
+		}
 	  }
 	},
-	"img": {
-	  "vType": "url",
-	  "required": 0
-	},
-	"icon": {
-	  "vType": "text",
-	  "required": 0
-	},
-	"praised": {
-	  "vType": "array",
-	  "required": 0,
-	  "elem": {
-		"vType": "object"
-	  }
-	}
+	"required": [
+	  "type",
+	  "post_id",
+	  "sent_at",
+	  "sender"
+	]
   }
 }
